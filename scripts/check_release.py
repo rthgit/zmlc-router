@@ -38,6 +38,11 @@ def main() -> int:
     args = parser.parse_args()
     root = args.root.resolve()
     failures: list[str] = []
+    developer_path_needles = {
+        str(root).encode("utf-8"),
+        str(root).replace("\\", "/").encode("utf-8"),
+        str(root).encode("utf-16-le"),
+    }
 
     required = (
         "LICENSE",
@@ -80,6 +85,11 @@ def main() -> int:
     for path in root.rglob("*"):
         if not path.is_file() or any(part in IGNORED_PARTS for part in path.parts):
             continue
+        if "plugins" in path.parts:
+            payload = path.read_bytes()
+            if any(needle in payload for needle in developer_path_needles):
+                fail(f"absolute build path in plugin artifact: {path.relative_to(root)}", failures)
+                continue
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")

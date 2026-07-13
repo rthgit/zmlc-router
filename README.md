@@ -96,6 +96,6 @@ The Codex plugin exposes the same behavior through `compile_prompt` and
 
 ## Status
 
-`0.9.0` is the public beta. The deterministic release gate and standalone runtime are
+`0.9.1` is the public beta. The deterministic release gate and standalone runtime are
 complete. Version 1.0 additionally requires a published paired A/B run against plain
 Codex using the same host model and settings; proxy savings alone are not sufficient.

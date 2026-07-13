@@ -15,7 +15,11 @@ def build_runtime(project_root: Path, output: Path) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="zmlc-runtime-") as temp_dir:
         staging = Path(temp_dir)
-        shutil.copytree(source_package, staging / "zmlc")
+        shutil.copytree(
+            source_package,
+            staging / "zmlc",
+            ignore=shutil.ignore_patterns("__pycache__", "*.pyc", "*.pyo"),
+        )
         (staging / "__main__.py").write_text(
             "from zmlc.mcp_server import main\n\nif __name__ == '__main__':\n    main()\n",
             encoding="utf-8",

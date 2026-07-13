@@ -2,7 +2,7 @@
 
 ## Implementation status
 
-The `0.9.0` public-beta implementation now includes the portable runtime builders,
+The `0.9.1` public-beta implementation now includes the portable runtime builders,
 solver-specific verification, public proxy corpus, content-free telemetry, host-model
 delegation, compact prompt compiler, paired A/B analyzer, hard release checks,
 cross-platform CI, signed release workflows, privacy/security policies, and clean

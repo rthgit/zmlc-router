@@ -1,6 +1,6 @@
 {
   "name": "zmlc-router",
-  "version": "0.9.0+codex.20260713090318",
+  "version": "0.9.1+codex.20260713093434",
   "description": "Route Codex tasks through deterministic solvers before using model generation.",
   "author": {
     "name": "RTHack",

@@ -20,6 +20,10 @@ def main() -> int:
         shutil.rmtree(bundle)
     plugin_bundle = bundle / "plugins" / "zmlc-router"
     shutil.copytree(plugin_source, plugin_bundle)
+    # The standalone bundle uses the native MCP executable built below. Keeping
+    # the development zipapp would duplicate the runtime and retain bytecode
+    # source filenames from the build machine.
+    shutil.rmtree(plugin_bundle / "runtime", ignore_errors=True)
     marketplace_path = bundle / ".agents" / "plugins" / "marketplace.json"
     marketplace_path.parent.mkdir(parents=True, exist_ok=True)
     marketplace_path.write_text(
@@ -91,6 +95,17 @@ def main() -> int:
         + "\n",
         encoding="utf-8",
     )
+
+    developer_path = str(project_root)
+    needles = {
+        developer_path.encode("utf-8"),
+        developer_path.encode("utf-16-le"),
+    }
+    for path in plugin_bundle.rglob("*"):
+        if path.is_file():
+            payload = path.read_bytes()
+            if any(needle in payload for needle in needles):
+                raise SystemExit(f"standalone bundle contains developer path: {path}")
     print(bundle)
     return 0
 
