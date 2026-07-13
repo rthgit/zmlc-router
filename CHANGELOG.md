@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## 1.0.1
+
+- Added a dedicated ZMLC routing icon for the composer and plugin catalog.
+- Added a reproducible renderer and transparent 64 px and 512 px PNG assets.
+
 ## 1.0.0
 
 - Added `zmlc codex`, a fail-closed preflight that avoids Codex calls for verified tasks.

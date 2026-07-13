@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ZMLC Router">
+  <rect width="64" height="64" rx="14" fill="#07131f"/>
+  <path d="M12 18h6c7 0 8 8 14 10" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M12 32h12" fill="none" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+  <path d="M12 46h6c7 0 8-8 14-10" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="34" cy="32" r="11" fill="#07131f" stroke="#f8fafc" stroke-width="4"/>
+  <circle cx="34" cy="32" r="3.5" fill="#34d399"/>
+  <path d="M45 32h9" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+</svg>

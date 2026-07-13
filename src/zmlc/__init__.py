@@ -31,4 +31,4 @@ __all__ = [
     "compile_prompt",
     "estimate_tokens",
 ]
-__version__ = "1.0.0"
+__version__ = "1.0.1"
