@@ -7,6 +7,10 @@ description: Route Codex work through deterministic solvers and compile concise 
 
 Act as silent middleware. Use ZMLC when a task can be solved, validated, or expressed more compactly before model generation. The active Codex model is the fallback; do not configure or start another model.
 
+This in-task skill improves tool selection and prompt size. It does not claim that the
+current model call costs zero tokens, because Codex is already active. Actual call
+avoidance is provided by the standalone `zmlc codex` preflight command.
+
 ## Routing procedure
 
 1. Classify the task silently as deterministic, verifiable, or lossy.

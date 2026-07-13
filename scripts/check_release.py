@@ -51,6 +51,7 @@ def main() -> int:
         "docs/INSTALL.md",
         "docs/PRIVACY.md",
         "benchmarks/public_mixed_200.jsonl",
+        "benchmarks/results/codex_ab_smoke_gpt-5.5.json",
         "build/benchmark/report.json",
         "plugins/zmlc-router/.codex-plugin/plugin.json",
         "plugins/zmlc-router/.mcp.json",
@@ -74,6 +75,14 @@ def main() -> int:
         if report.get("false_accepts") != 0:
             fail("public benchmark contains deterministic false accepts", failures)
 
+    codex_report_path = root / "benchmarks/results/codex_ab_smoke_gpt-5.5.json"
+    if codex_report_path.is_file():
+        codex_report = json.loads(codex_report_path.read_text(encoding="utf-8"))
+        if not (codex_report.get("gate") or {}).get("passed"):
+            fail("real Codex A/B gate failed", failures)
+        if codex_report.get("quality_delta", -1) < -0.01:
+            fail("real Codex A/B quality loss exceeds one percentage point", failures)
+
     plugin_path = root / "plugins/zmlc-router/.codex-plugin/plugin.json"
     if plugin_path.is_file():
         plugin = json.loads(plugin_path.read_text(encoding="utf-8"))
@@ -81,6 +90,16 @@ def main() -> int:
             fail("plugin name must be zmlc-router", failures)
         if plugin.get("repository") != "https://github.com/rthgit/zmlc-router":
             fail("plugin repository must point to the public framework repository", failures)
+
+    mcp_path = root / "plugins/zmlc-router/.mcp.json"
+    if mcp_path.is_file():
+        mcp_document = json.loads(mcp_path.read_text(encoding="utf-8"))
+        servers = mcp_document.get("mcpServers") or mcp_document.get("mcp_servers") or {}
+        server = servers.get("zmlc-router") or {}
+        if server.get("cwd") != ".":
+            fail("plugin MCP server must resolve its command from plugin-root cwd", failures)
+        if server.get("default_tools_approval_mode") != "approve":
+            fail("local read-only MCP tools must be non-interactive in codex exec", failures)
 
     for path in root.rglob("*"):
         if not path.is_file() or any(part in IGNORED_PARTS for part in path.parts):

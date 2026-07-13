@@ -8,6 +8,11 @@ It attempts bounded, independently verified solvers before model generation. In 
 Codex plugin, unsupported work is delegated to the active Codex model; no second model,
 API key, or local model is required.
 
+The standalone `zmlc codex` command is the real preflight path: it returns verified
+deterministic answers before Codex starts and otherwise invokes the Codex installation
+already present on the machine. The MCP plugin complements this with tools inside an
+active task, but does not claim to erase a model call that has already begun.
+
 This repository is the reusable framework extracted from the AMD Track 1 prototype.
 It intentionally excludes benchmark IDs, retired questions, cached answers, and
 competition-specific scoring logic.
@@ -23,6 +28,11 @@ The checked-in 200-task public proxy corpus currently reports:
 
 These are proxy routing results, not a Codex billing claim. See
 `docs/BENCHMARKING.md` for the exact methodology and limitations.
+
+A paired five-task `codex exec` smoke A/B using the same `gpt-5.5`, low reasoning,
+and read-only sandbox settings preserved 5/5 answer quality, avoided 4/5 Codex calls,
+and reduced measured aggregate tokens by 81.56%. This deliberately small deterministic
+smoke demonstrates call avoidance; it is not a savings forecast for arbitrary coding.
 
 ## Install
 
@@ -46,6 +56,8 @@ python -m pip install -e ".[mcp]"
 
 ```bash
 zmlc solve "What is 17 + 25?" --type math
+zmlc codex "What is 17 + 25?"
+zmlc codex "Review this repository" --cd . --sandbox workspace-write
 zmlc route "Return JSON only: {\"ok\": true}"
 zmlc prompt "Fix the parser" --context @src/parser.py --constraint "Keep API stable" --check "Run parser tests"
 zmlc benchmark benchmarks/public_mixed_200.jsonl --report build/benchmark/report.json
@@ -81,9 +93,7 @@ Task -> SolverRegistry -> Solver Verifier -> Host Model Delegation -> SolveResul
 
 Local and remote providers remain optional framework integrations; they are disabled in
 the default Codex plugin. See `docs/ARCHITECTURE.md` and `docs/PLUGIN.md`.
-
-The path from the current personal plugin to a portable public 1.0 release is defined
-in `docs/ROADMAP_PUBLIC.md`.
+See `docs/CODEX_PREFLIGHT.md` for the model-call avoidance contract.
 
 ## Prompt engineering
 
@@ -96,6 +106,5 @@ The Codex plugin exposes the same behavior through `compile_prompt` and
 
 ## Status
 
-`0.9.1` is the public beta. The deterministic release gate and standalone runtime are
-complete. Version 1.0 additionally requires a published paired A/B run against plain
-Codex using the same host model and settings; proxy savings alone are not sufficient.
+`1.0.0` freezes the solver and MCP contracts, ships standalone MCP and preflight CLI
+binaries, and publishes both proxy and real paired smoke measurements.

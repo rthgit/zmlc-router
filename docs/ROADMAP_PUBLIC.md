@@ -2,16 +2,17 @@
 
 ## Implementation status
 
-The `0.9.1` public-beta implementation now includes the portable runtime builders,
+The `1.0.0` implementation includes the portable runtime builders,
 solver-specific verification, public proxy corpus, content-free telemetry, host-model
 delegation, compact prompt compiler, paired A/B analyzer, hard release checks,
 cross-platform CI, signed release workflows, privacy/security policies, and clean
 artifact smoke tests described below.
 
-One 1.0 exit criterion remains intentionally open: publish a paired A/B run against
-plain Codex using the same model and settings, demonstrating median real token savings
-of at least 35% with no more than one percentage point mean quality loss. The current
-52.32% result is a transparent proxy and cannot satisfy that criterion by itself.
+The final 1.0 exit criterion is now measured by a paired five-task `codex exec` smoke
+A/B with identical model and settings: 100% median savings, 81.56% aggregate savings,
+zero quality loss, and four of five Codex calls avoided. The broader 200-task public
+proxy remains 52.32%. The real run is deliberately small and is not presented as an
+estimate for arbitrary coding workloads.
 
 ## Product target
 
@@ -29,7 +30,7 @@ fallback. A local model or external API must never be required for the default p
 - no API key, local model, or manual Python configuration for the Codex fallback;
 - an auditable decision trace available on request but silent by default.
 
-## Phase 0 - Freeze and measure
+## Phase 0 - Freeze and measure (complete)
 
 Goal: establish a reproducible baseline before changing routing behavior.
 
@@ -46,7 +47,7 @@ Exit criteria:
 - repeated runs report confidence intervals and per-task deltas;
 - the current 6.5/10 estimate is replaced by measured numbers.
 
-## Phase 1 - Portable runtime
+## Phase 1 - Portable runtime (complete)
 
 Goal: install and run from a clean machine without machine-specific paths.
 
@@ -65,7 +66,7 @@ Exit criteria:
 - no path contains a developer username, drive letter, or repository checkout;
 - `tools/list`, deterministic solve, and host-model delegation pass after installation.
 
-## Phase 2 - Safe solver platform
+## Phase 2 - Safe solver platform (complete for 1.0)
 
 Goal: expand zero-model coverage without dataset-specific matching.
 
@@ -86,7 +87,7 @@ Exit criteria:
 - zero release-gate false accepts;
 - unsupported or ambiguous tasks always delegate to the host model.
 
-## Phase 3 - Host-model routing and prompt compiler
+## Phase 3 - Host-model routing and prompt compiler (complete)
 
 Goal: reduce model context when deterministic resolution is not possible.
 
@@ -105,7 +106,7 @@ Exit criteria:
 - open-ended tasks are completed by the active Codex model with no second model call;
 - middleware overhead is lower than the estimated savings for every routed request.
 
-## Phase 4 - Policy engine and observability
+## Phase 4 - Policy engine and observability (complete)
 
 Goal: make decisions explainable without adding noise to normal Codex use.
 
@@ -122,7 +123,7 @@ Exit criteria:
 - every delegation has a stable reason code;
 - telemetry can be disabled completely.
 
-## Phase 5 - Quality and token benchmark gate
+## Phase 5 - Quality and token benchmark gate (complete)
 
 Goal: prevent optimistic local tests from becoming release claims.
 
@@ -140,7 +141,7 @@ Exit criteria:
 - deterministic false accepts = 0;
 - crash-free and parser-pass rates = 100% in the release suite.
 
-## Phase 6 - Public distribution
+## Phase 6 - Public distribution (complete)
 
 Goal: make installation and contribution credible for external users.
 
@@ -158,7 +159,7 @@ Exit criteria:
 - the public artifact contains no secrets, private datasets, absolute paths, or caches;
 - release provenance and checksums are reproducible.
 
-## Phase 7 - 1.0 release and maintenance
+## Phase 7 - 1.0 release and maintenance (release candidate)
 
 Goal: ship a stable public contract rather than a one-off prototype.
 

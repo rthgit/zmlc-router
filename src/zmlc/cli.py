@@ -5,6 +5,7 @@ import json
 import sys
 
 from zmlc.benchmark import load_cases, run_benchmark, write_report
+from zmlc.codex_runner import run_codex_preflight
 from zmlc.experiments import compare_observations, load_observations, write_paired_report
 from zmlc.models import Task
 from zmlc.prompting import PromptSpec, compile_prompt
@@ -49,6 +50,21 @@ def main(argv: list[str] | None = None) -> int:
     compare_cmd.add_argument("--report")
     compare_cmd.add_argument("--minimum-savings", type=float, default=35.0)
     compare_cmd.add_argument("--maximum-quality-loss", type=float, default=0.01)
+    codex_cmd = sub.add_parser(
+        "codex",
+        help="Avoid a Codex call for verified deterministic tasks, otherwise run Codex",
+    )
+    codex_cmd.add_argument("prompt", nargs="?")
+    codex_cmd.add_argument("--type", default="auto", dest="task_type")
+    codex_cmd.add_argument("--codex-bin")
+    codex_cmd.add_argument("--model")
+    codex_cmd.add_argument("--reasoning-effort")
+    codex_cmd.add_argument("--sandbox")
+    codex_cmd.add_argument("--cd")
+    codex_cmd.add_argument("--config", action="append", default=[])
+    codex_cmd.add_argument("--persist", action="store_true")
+    codex_cmd.add_argument("--json", action="store_true", dest="json_output")
+    codex_cmd.add_argument("--audit", action="store_true")
     args = parser.parse_args(argv)
     if args.command == "prompt":
         compiled = compile_prompt(
@@ -84,6 +100,40 @@ def main(argv: list[str] | None = None) -> int:
             write_paired_report(report, args.report)
         print(json.dumps(report.to_dict(), indent=2))
         return 0 if report.gate_passed else 3
+    if args.command == "codex":
+        prompt = args.prompt or sys.stdin.read().strip()
+        if not prompt:
+            parser.error("a prompt is required")
+        result = run_codex_preflight(
+            prompt,
+            task_type=args.task_type,
+            codex_binary=args.codex_bin,
+            model=args.model,
+            reasoning_effort=args.reasoning_effort,
+            sandbox=args.sandbox,
+            cwd=args.cd,
+            configs=args.config,
+            ephemeral=not args.persist,
+        )
+        if args.json_output or args.audit:
+            print(
+                json.dumps(
+                    {
+                        "answer": result.answer,
+                        "route": result.route.value,
+                        "codex_invoked": result.codex_invoked,
+                        "solver": result.solver,
+                        "exit_code": result.exit_code,
+                        "usage": result.usage.__dict__,
+                    },
+                    indent=2,
+                )
+            )
+        else:
+            print(result.answer)
+        if result.stderr and (args.audit or result.exit_code != 0):
+            print(result.stderr, file=sys.stderr, end="")
+        return result.exit_code
     prompt = args.prompt or sys.stdin.read().strip()
     if not prompt:
         parser.error("a prompt is required")

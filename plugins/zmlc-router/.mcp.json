@@ -2,7 +2,23 @@
   "mcpServers": {
     "zmlc-router": {
       "command": "python",
-      "args": ["./runtime/zmlc_router.pyz"]
+      "args": ["./runtime/zmlc_router.pyz"],
+      "cwd": ".",
+      "required": true,
+      "startup_timeout_sec": 15,
+      "tool_timeout_sec": 10,
+      "supports_parallel_tool_calls": true,
+      "default_tools_approval_mode": "approve",
+      "enabled_tools": [
+        "route_task",
+        "audit_task",
+        "solve_math",
+        "validate_json",
+        "list_solvers",
+        "compile_prompt",
+        "estimate_tokens",
+        "session_metrics"
+      ]
     }
   }
 }

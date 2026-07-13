@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+## 1.0.0
+
+- Added `zmlc codex`, a fail-closed preflight that avoids Codex calls for verified tasks.
+- Added automatic discovery of installed Codex CLI and Codex Desktop runtimes.
+- Added a real paired `codex exec` A/B gate and published task-level smoke results.
+- Added a standalone `zmlc` executable to every platform release bundle.
+- Fixed MCP startup from cached plugin directories and approved the local read-only tool set.
+- Documented the distinction between in-task MCP assistance and actual call avoidance.
+
 ## 0.9.1
 
 - Removed the unused Python zipapp from native standalone plugin bundles.

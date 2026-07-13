@@ -1,7 +1,7 @@
 {
   "name": "zmlc-router",
-  "version": "0.9.1+codex.20260713093434",
-  "description": "Route Codex tasks through deterministic solvers before using model generation.",
+  "version": "1.0.0+codex.20260713103420",
+  "description": "Use verified deterministic tools and compact prompts with the active Codex model.",
   "author": {
     "name": "RTHack",
     "url": "https://github.com/rthgit"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "ZMLC Local-First Router",
-    "shortDescription": "Solve locally and compile smaller Codex prompts.",
-    "longDescription": "ZMLC silently uses deterministic solvers when possible, then delegates unsupported work to the active Codex model with compact task contracts.",
+    "shortDescription": "Verified solvers and compact prompts for Codex.",
+    "longDescription": "ZMLC exposes verified deterministic tools inside Codex and ships a standalone preflight CLI that avoids starting Codex when a safe solver can answer exactly.",
     "developerName": "RTHack",
     "category": "Productivity",
     "capabilities": [

@@ -1,0 +1,5 @@
+{"task_id":"arithmetic","prompt":"Return only the final answer: What is 17 + 25?","expected":"42","task_type":"math"}
+{"task_id":"percentage","prompt":"Return only the final answer: What is 25% of 80?","expected":"20","task_type":"math"}
+{"task_id":"uppercase","prompt":"Return the uppercase form of \"token route\".","expected":"TOKEN ROUTE","task_type":"format_strict"}
+{"task_id":"exact_json","prompt":"Return JSON only: {\"ok\": true, \"count\": 3}","expected":"{\"ok\":true,\"count\":3}","task_type":"format_strict","comparison":"json"}
+{"task_id":"host_fallback","prompt":"Return only the word blue.","expected":"blue","task_type":"qa"}

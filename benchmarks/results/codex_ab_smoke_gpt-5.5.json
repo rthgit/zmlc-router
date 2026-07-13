@@ -1,0 +1,28 @@
+{
+  "measurement": "real_codex_exec_tokens",
+  "model": "gpt-5.5",
+  "reasoning_effort": "low",
+  "sandbox": "read-only",
+  "task_count": 5,
+  "baseline_quality": 1.0,
+  "candidate_quality": 1.0,
+  "quality_delta": 0.0,
+  "baseline_tokens": 75255,
+  "candidate_tokens": 13880,
+  "median_savings_pct": 100.0,
+  "aggregate_savings_pct": 81.56,
+  "codex_calls_avoided": 4,
+  "limitations": "Small deterministic smoke A/B. It demonstrates model-call avoidance, not expected savings on arbitrary coding workloads.",
+  "gate": {
+    "minimum_median_savings_pct": 35.0,
+    "maximum_quality_loss": 0.01,
+    "passed": true
+  },
+  "observations": [
+    {"task_id":"arithmetic","baseline_tokens":13900,"candidate_tokens":0,"baseline_correct":true,"candidate_correct":true,"candidate_route":"deterministic","codex_invoked":false,"savings_pct":100.0},
+    {"task_id":"percentage","baseline_tokens":15831,"candidate_tokens":0,"baseline_correct":true,"candidate_correct":true,"candidate_route":"deterministic","codex_invoked":false,"savings_pct":100.0},
+    {"task_id":"uppercase","baseline_tokens":15816,"candidate_tokens":0,"baseline_correct":true,"candidate_correct":true,"candidate_route":"deterministic","codex_invoked":false,"savings_pct":100.0},
+    {"task_id":"exact_json","baseline_tokens":15828,"candidate_tokens":0,"baseline_correct":true,"candidate_correct":true,"candidate_route":"deterministic","codex_invoked":false,"savings_pct":100.0},
+    {"task_id":"host_fallback","baseline_tokens":13880,"candidate_tokens":13880,"baseline_correct":true,"candidate_correct":true,"candidate_route":"host_model","codex_invoked":true,"savings_pct":0.0}
+  ]
+}

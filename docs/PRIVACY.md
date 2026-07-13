@@ -9,3 +9,8 @@ Full decision traces are returned only through the explicit `audit_task` tool or
 
 The plugin does not start a local model and does not make remote model calls. When a
 task is unsupported, it delegates to the active Codex model already serving the task.
+
+The standalone preflight command executes the user's existing Codex CLI only after all
+deterministic solvers abstain. It passes the original prompt and user-selected Codex
+settings directly to that CLI. ZMLC does not intercept credentials, add a provider,
+persist transcripts, or create its own account or model cache.

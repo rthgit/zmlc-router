@@ -52,41 +52,64 @@ def main() -> int:
         encoding="utf-8",
     )
 
-    executable_name = "zmlc-mcp.exe" if sys.platform == "win32" else "zmlc-mcp"
     dist_dir = project_root / "build" / "standalone"
     work_dir = project_root / "build" / "pyinstaller"
-    subprocess.run(
-        [
-            sys.executable,
-            "-m",
-            "PyInstaller",
-            "--onefile",
-            "--clean",
-            "--name",
-            "zmlc-mcp",
-            "--distpath",
-            str(dist_dir),
-            "--workpath",
-            str(work_dir),
-            "--specpath",
-            str(work_dir),
-            "--paths",
-            str(project_root / "src"),
-            str(project_root / "scripts" / "standalone_entry.py"),
-        ],
-        check=True,
-        cwd=project_root,
+    executables = (
+        ("zmlc-mcp", project_root / "scripts" / "standalone_entry.py"),
+        ("zmlc", project_root / "scripts" / "standalone_cli_entry.py"),
     )
+    for name, entrypoint in executables:
+        subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "PyInstaller",
+                "--onefile",
+                "--clean",
+                "--name",
+                name,
+                "--distpath",
+                str(dist_dir),
+                "--workpath",
+                str(work_dir / name),
+                "--specpath",
+                str(work_dir),
+                "--paths",
+                str(project_root / "src"),
+                str(entrypoint),
+            ],
+            check=True,
+            cwd=project_root,
+        )
     bin_dir = plugin_bundle / "bin"
     bin_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(dist_dir / executable_name, bin_dir / executable_name)
+    suffix = ".exe" if sys.platform == "win32" else ""
+    for name, _ in executables:
+        shutil.copy2(dist_dir / f"{name}{suffix}", bin_dir / f"{name}{suffix}")
+    mcp_executable_name = f"zmlc-mcp{suffix}"
     (plugin_bundle / ".mcp.json").write_text(
         json.dumps(
             {
                 "mcpServers": {
                     "zmlc-router": {
-                        "command": f"./bin/{executable_name}",
+                        "command": f"./bin/{mcp_executable_name}",
                         "args": [],
+                        "cwd": ".",
+                        "required": True,
+                        "startup_timeout_sec": 15,
+                        "tool_timeout_sec": 10,
+                        "supports_parallel_tool_calls": True,
+                        "default_tools_approval_mode": "approve",
+                        "enabled_tools": [
+                            "route_task",
+                            "audit_task",
+                            "solve_math",
+                            "validate_json",
+                            "list_solvers",
+                            "compile_prompt",
+                            "estimate_tokens",
+                            "session_metrics",
+                        ],
                     }
                 }
             },
@@ -106,6 +129,16 @@ def main() -> int:
             payload = path.read_bytes()
             if any(needle in payload for needle in needles):
                 raise SystemExit(f"standalone bundle contains developer path: {path}")
+    subprocess.run(
+        [
+            sys.executable,
+            str(project_root / "scripts" / "smoke_standalone.py"),
+            "--root",
+            str(bundle),
+        ],
+        check=True,
+        cwd=project_root,
+    )
     print(bundle)
     return 0
 

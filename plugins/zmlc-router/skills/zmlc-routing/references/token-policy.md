@@ -55,6 +55,10 @@ Codex itself is the model fallback. Never start a local model or request another
 plugin. If no deterministic solver applies, continue the original task directly in the active
 Codex session. Do not inspect the plugin implementation or invoke its Python entrypoint manually.
 
+For automation outside an existing task, `zmlc codex` is the preflight boundary. It invokes the
+installed Codex CLI only after every verified solver abstains. Never replace this with a local
+model, an extra API provider, or an unverified rule.
+
 ## Reasoning policy
 
 Request the final answer, decision, evidence, or patch. Do not request hidden reasoning.

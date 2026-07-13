@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "zmlc-router"
-version = "0.9.1"
-description = "Local-first routing framework for deterministic solvers, verifiers, local models, and remote LLM fallbacks."
+version = "1.0.0"
+description = "Verified deterministic preflight routing that avoids unnecessary Codex model calls."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
