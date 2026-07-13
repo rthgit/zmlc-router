@@ -1,0 +1,200 @@
+{"task_id":"arithmetic-000","prompt":"Calculate 3 + 2.","task_type":"math","expected_route":"deterministic","expected_answer":"5","baseline_tokens":80}
+{"task_id":"arithmetic-001","prompt":"Calculate 4 + 3.","task_type":"math","expected_route":"deterministic","expected_answer":"7","baseline_tokens":80}
+{"task_id":"arithmetic-002","prompt":"Calculate 5 + 4.","task_type":"math","expected_route":"deterministic","expected_answer":"9","baseline_tokens":80}
+{"task_id":"arithmetic-003","prompt":"Calculate 6 + 5.","task_type":"math","expected_route":"deterministic","expected_answer":"11","baseline_tokens":80}
+{"task_id":"arithmetic-004","prompt":"Calculate 7 + 6.","task_type":"math","expected_route":"deterministic","expected_answer":"13","baseline_tokens":80}
+{"task_id":"arithmetic-005","prompt":"Calculate 8 + 7.","task_type":"math","expected_route":"deterministic","expected_answer":"15","baseline_tokens":80}
+{"task_id":"arithmetic-006","prompt":"Calculate 9 + 8.","task_type":"math","expected_route":"deterministic","expected_answer":"17","baseline_tokens":80}
+{"task_id":"arithmetic-007","prompt":"Calculate 10 + 9.","task_type":"math","expected_route":"deterministic","expected_answer":"19","baseline_tokens":80}
+{"task_id":"arithmetic-008","prompt":"Calculate 11 + 10.","task_type":"math","expected_route":"deterministic","expected_answer":"21","baseline_tokens":80}
+{"task_id":"arithmetic-009","prompt":"Calculate 12 + 2.","task_type":"math","expected_route":"deterministic","expected_answer":"14","baseline_tokens":80}
+{"task_id":"arithmetic-010","prompt":"Calculate 13 + 3.","task_type":"math","expected_route":"deterministic","expected_answer":"16","baseline_tokens":80}
+{"task_id":"arithmetic-011","prompt":"Calculate 14 + 4.","task_type":"math","expected_route":"deterministic","expected_answer":"18","baseline_tokens":80}
+{"task_id":"arithmetic-012","prompt":"Calculate 15 + 5.","task_type":"math","expected_route":"deterministic","expected_answer":"20","baseline_tokens":80}
+{"task_id":"arithmetic-013","prompt":"Calculate 16 + 6.","task_type":"math","expected_route":"deterministic","expected_answer":"22","baseline_tokens":80}
+{"task_id":"arithmetic-014","prompt":"Calculate 17 + 7.","task_type":"math","expected_route":"deterministic","expected_answer":"24","baseline_tokens":80}
+{"task_id":"arithmetic-015","prompt":"Calculate 18 + 8.","task_type":"math","expected_route":"deterministic","expected_answer":"26","baseline_tokens":80}
+{"task_id":"arithmetic-016","prompt":"Calculate 19 + 9.","task_type":"math","expected_route":"deterministic","expected_answer":"28","baseline_tokens":80}
+{"task_id":"arithmetic-017","prompt":"Calculate 20 + 10.","task_type":"math","expected_route":"deterministic","expected_answer":"30","baseline_tokens":80}
+{"task_id":"arithmetic-018","prompt":"Calculate 21 + 2.","task_type":"math","expected_route":"deterministic","expected_answer":"23","baseline_tokens":80}
+{"task_id":"arithmetic-019","prompt":"Calculate 22 + 3.","task_type":"math","expected_route":"deterministic","expected_answer":"25","baseline_tokens":80}
+{"task_id":"arithmetic-020","prompt":"Calculate 23 + 4.","task_type":"math","expected_route":"deterministic","expected_answer":"27","baseline_tokens":80}
+{"task_id":"arithmetic-021","prompt":"Calculate 24 + 5.","task_type":"math","expected_route":"deterministic","expected_answer":"29","baseline_tokens":80}
+{"task_id":"arithmetic-022","prompt":"Calculate 25 + 6.","task_type":"math","expected_route":"deterministic","expected_answer":"31","baseline_tokens":80}
+{"task_id":"arithmetic-023","prompt":"Calculate 26 + 7.","task_type":"math","expected_route":"deterministic","expected_answer":"33","baseline_tokens":80}
+{"task_id":"arithmetic-024","prompt":"Calculate 27 + 8.","task_type":"math","expected_route":"deterministic","expected_answer":"35","baseline_tokens":80}
+{"task_id":"arithmetic-025","prompt":"Calculate 28 + 9.","task_type":"math","expected_route":"deterministic","expected_answer":"37","baseline_tokens":80}
+{"task_id":"arithmetic-026","prompt":"Calculate 29 + 10.","task_type":"math","expected_route":"deterministic","expected_answer":"39","baseline_tokens":80}
+{"task_id":"arithmetic-027","prompt":"Calculate 30 + 2.","task_type":"math","expected_route":"deterministic","expected_answer":"32","baseline_tokens":80}
+{"task_id":"arithmetic-028","prompt":"Calculate 31 + 3.","task_type":"math","expected_route":"deterministic","expected_answer":"34","baseline_tokens":80}
+{"task_id":"arithmetic-029","prompt":"Calculate 32 + 4.","task_type":"math","expected_route":"deterministic","expected_answer":"36","baseline_tokens":80}
+{"task_id":"arithmetic-030","prompt":"Calculate 33 + 5.","task_type":"math","expected_route":"deterministic","expected_answer":"38","baseline_tokens":80}
+{"task_id":"arithmetic-031","prompt":"Calculate 34 + 6.","task_type":"math","expected_route":"deterministic","expected_answer":"40","baseline_tokens":80}
+{"task_id":"arithmetic-032","prompt":"Calculate 35 + 7.","task_type":"math","expected_route":"deterministic","expected_answer":"42","baseline_tokens":80}
+{"task_id":"arithmetic-033","prompt":"Calculate 36 + 8.","task_type":"math","expected_route":"deterministic","expected_answer":"44","baseline_tokens":80}
+{"task_id":"arithmetic-034","prompt":"Calculate 37 + 9.","task_type":"math","expected_route":"deterministic","expected_answer":"46","baseline_tokens":80}
+{"task_id":"arithmetic-035","prompt":"Calculate 38 + 10.","task_type":"math","expected_route":"deterministic","expected_answer":"48","baseline_tokens":80}
+{"task_id":"arithmetic-036","prompt":"Calculate 39 + 2.","task_type":"math","expected_route":"deterministic","expected_answer":"41","baseline_tokens":80}
+{"task_id":"arithmetic-037","prompt":"Calculate 40 + 3.","task_type":"math","expected_route":"deterministic","expected_answer":"43","baseline_tokens":80}
+{"task_id":"arithmetic-038","prompt":"Calculate 41 + 4.","task_type":"math","expected_route":"deterministic","expected_answer":"45","baseline_tokens":80}
+{"task_id":"arithmetic-039","prompt":"Calculate 42 + 5.","task_type":"math","expected_route":"deterministic","expected_answer":"47","baseline_tokens":80}
+{"task_id":"aggregate-000","prompt":"Return the sum of [1, 3, 5].","task_type":"math","expected_route":"deterministic","expected_answer":"9","baseline_tokens":80}
+{"task_id":"aggregate-001","prompt":"Return the sum of [2, 4, 6].","task_type":"math","expected_route":"deterministic","expected_answer":"12","baseline_tokens":80}
+{"task_id":"aggregate-002","prompt":"Return the sum of [3, 5, 7].","task_type":"math","expected_route":"deterministic","expected_answer":"15","baseline_tokens":80}
+{"task_id":"aggregate-003","prompt":"Return the sum of [4, 6, 8].","task_type":"math","expected_route":"deterministic","expected_answer":"18","baseline_tokens":80}
+{"task_id":"aggregate-004","prompt":"Return the sum of [5, 7, 9].","task_type":"math","expected_route":"deterministic","expected_answer":"21","baseline_tokens":80}
+{"task_id":"aggregate-005","prompt":"Return the sum of [6, 8, 10].","task_type":"math","expected_route":"deterministic","expected_answer":"24","baseline_tokens":80}
+{"task_id":"aggregate-006","prompt":"Return the sum of [7, 9, 11].","task_type":"math","expected_route":"deterministic","expected_answer":"27","baseline_tokens":80}
+{"task_id":"aggregate-007","prompt":"Return the sum of [8, 10, 12].","task_type":"math","expected_route":"deterministic","expected_answer":"30","baseline_tokens":80}
+{"task_id":"aggregate-008","prompt":"Return the sum of [9, 11, 13].","task_type":"math","expected_route":"deterministic","expected_answer":"33","baseline_tokens":80}
+{"task_id":"aggregate-009","prompt":"Return the sum of [10, 12, 14].","task_type":"math","expected_route":"deterministic","expected_answer":"36","baseline_tokens":80}
+{"task_id":"aggregate-010","prompt":"Return the sum of [11, 13, 15].","task_type":"math","expected_route":"deterministic","expected_answer":"39","baseline_tokens":80}
+{"task_id":"aggregate-011","prompt":"Return the sum of [12, 14, 16].","task_type":"math","expected_route":"deterministic","expected_answer":"42","baseline_tokens":80}
+{"task_id":"aggregate-012","prompt":"Return the sum of [13, 15, 17].","task_type":"math","expected_route":"deterministic","expected_answer":"45","baseline_tokens":80}
+{"task_id":"aggregate-013","prompt":"Return the sum of [14, 16, 18].","task_type":"math","expected_route":"deterministic","expected_answer":"48","baseline_tokens":80}
+{"task_id":"aggregate-014","prompt":"Return the sum of [15, 17, 19].","task_type":"math","expected_route":"deterministic","expected_answer":"51","baseline_tokens":80}
+{"task_id":"aggregate-015","prompt":"Return the sum of [16, 18, 20].","task_type":"math","expected_route":"deterministic","expected_answer":"54","baseline_tokens":80}
+{"task_id":"aggregate-016","prompt":"Return the sum of [17, 19, 21].","task_type":"math","expected_route":"deterministic","expected_answer":"57","baseline_tokens":80}
+{"task_id":"aggregate-017","prompt":"Return the sum of [18, 20, 22].","task_type":"math","expected_route":"deterministic","expected_answer":"60","baseline_tokens":80}
+{"task_id":"aggregate-018","prompt":"Return the sum of [19, 21, 23].","task_type":"math","expected_route":"deterministic","expected_answer":"63","baseline_tokens":80}
+{"task_id":"aggregate-019","prompt":"Return the sum of [20, 22, 24].","task_type":"math","expected_route":"deterministic","expected_answer":"66","baseline_tokens":80}
+{"task_id":"transform-000","prompt":"Return uppercase for \"Token Route 0\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 0","baseline_tokens":70}
+{"task_id":"transform-001","prompt":"Return uppercase for \"Token Route 1\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 1","baseline_tokens":70}
+{"task_id":"transform-002","prompt":"Return uppercase for \"Token Route 2\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 2","baseline_tokens":70}
+{"task_id":"transform-003","prompt":"Return uppercase for \"Token Route 3\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 3","baseline_tokens":70}
+{"task_id":"transform-004","prompt":"Return uppercase for \"Token Route 4\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 4","baseline_tokens":70}
+{"task_id":"transform-005","prompt":"Return uppercase for \"Token Route 5\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 5","baseline_tokens":70}
+{"task_id":"transform-006","prompt":"Return uppercase for \"Token Route 6\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 6","baseline_tokens":70}
+{"task_id":"transform-007","prompt":"Return uppercase for \"Token Route 7\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 7","baseline_tokens":70}
+{"task_id":"transform-008","prompt":"Return uppercase for \"Token Route 8\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 8","baseline_tokens":70}
+{"task_id":"transform-009","prompt":"Return uppercase for \"Token Route 9\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 9","baseline_tokens":70}
+{"task_id":"transform-010","prompt":"Return uppercase for \"Token Route 10\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 10","baseline_tokens":70}
+{"task_id":"transform-011","prompt":"Return uppercase for \"Token Route 11\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 11","baseline_tokens":70}
+{"task_id":"transform-012","prompt":"Return uppercase for \"Token Route 12\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 12","baseline_tokens":70}
+{"task_id":"transform-013","prompt":"Return uppercase for \"Token Route 13\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 13","baseline_tokens":70}
+{"task_id":"transform-014","prompt":"Return uppercase for \"Token Route 14\".","task_type":"format_strict","expected_route":"deterministic","expected_answer":"TOKEN ROUTE 14","baseline_tokens":70}
+{"task_id":"unit-000","prompt":"Convert 1 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"1000","baseline_tokens":90}
+{"task_id":"unit-001","prompt":"Convert 2 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"2000","baseline_tokens":90}
+{"task_id":"unit-002","prompt":"Convert 3 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"3000","baseline_tokens":90}
+{"task_id":"unit-003","prompt":"Convert 4 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"4000","baseline_tokens":90}
+{"task_id":"unit-004","prompt":"Convert 5 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"5000","baseline_tokens":90}
+{"task_id":"unit-005","prompt":"Convert 6 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"6000","baseline_tokens":90}
+{"task_id":"unit-006","prompt":"Convert 7 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"7000","baseline_tokens":90}
+{"task_id":"unit-007","prompt":"Convert 8 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"8000","baseline_tokens":90}
+{"task_id":"unit-008","prompt":"Convert 9 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"9000","baseline_tokens":90}
+{"task_id":"unit-009","prompt":"Convert 10 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"10000","baseline_tokens":90}
+{"task_id":"unit-010","prompt":"Convert 11 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"11000","baseline_tokens":90}
+{"task_id":"unit-011","prompt":"Convert 12 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"12000","baseline_tokens":90}
+{"task_id":"unit-012","prompt":"Convert 13 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"13000","baseline_tokens":90}
+{"task_id":"unit-013","prompt":"Convert 14 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"14000","baseline_tokens":90}
+{"task_id":"unit-014","prompt":"Convert 15 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"15000","baseline_tokens":90}
+{"task_id":"unit-015","prompt":"Convert 16 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"16000","baseline_tokens":90}
+{"task_id":"unit-016","prompt":"Convert 17 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"17000","baseline_tokens":90}
+{"task_id":"unit-017","prompt":"Convert 18 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"18000","baseline_tokens":90}
+{"task_id":"unit-018","prompt":"Convert 19 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"19000","baseline_tokens":90}
+{"task_id":"unit-019","prompt":"Convert 20 km to m.","task_type":"math","expected_route":"deterministic","expected_answer":"20000","baseline_tokens":90}
+{"task_id":"finance-000","prompt":"Calculate the percentage change from 100 to 110.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-001","prompt":"Calculate the percentage change from 110 to 121.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-002","prompt":"Calculate the percentage change from 120 to 132.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-003","prompt":"Calculate the percentage change from 130 to 143.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-004","prompt":"Calculate the percentage change from 140 to 154.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-005","prompt":"Calculate the percentage change from 150 to 165.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-006","prompt":"Calculate the percentage change from 160 to 176.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-007","prompt":"Calculate the percentage change from 170 to 187.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-008","prompt":"Calculate the percentage change from 180 to 198.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-009","prompt":"Calculate the percentage change from 190 to 209.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-010","prompt":"Calculate the percentage change from 200 to 220.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-011","prompt":"Calculate the percentage change from 210 to 231.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-012","prompt":"Calculate the percentage change from 220 to 242.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-013","prompt":"Calculate the percentage change from 230 to 253.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"finance-014","prompt":"Calculate the percentage change from 240 to 264.","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":100}
+{"task_id":"set-000","prompt":"Return the union of [0, 1] and [1, 2] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[0,1,2]","baseline_tokens":90}
+{"task_id":"set-001","prompt":"Return the union of [1, 2] and [2, 3] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[1,2,3]","baseline_tokens":90}
+{"task_id":"set-002","prompt":"Return the union of [2, 3] and [3, 4] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[2,3,4]","baseline_tokens":90}
+{"task_id":"set-003","prompt":"Return the union of [3, 4] and [4, 5] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[3,4,5]","baseline_tokens":90}
+{"task_id":"set-004","prompt":"Return the union of [4, 5] and [5, 6] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[4,5,6]","baseline_tokens":90}
+{"task_id":"set-005","prompt":"Return the union of [5, 6] and [6, 7] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[5,6,7]","baseline_tokens":90}
+{"task_id":"set-006","prompt":"Return the union of [6, 7] and [7, 8] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[6,7,8]","baseline_tokens":90}
+{"task_id":"set-007","prompt":"Return the union of [7, 8] and [8, 9] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[7,8,9]","baseline_tokens":90}
+{"task_id":"set-008","prompt":"Return the union of [8, 9] and [9, 10] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[8,9,10]","baseline_tokens":90}
+{"task_id":"set-009","prompt":"Return the union of [9, 10] and [10, 11] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[9,10,11]","baseline_tokens":90}
+{"task_id":"set-010","prompt":"Return the union of [10, 11] and [11, 12] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[10,11,12]","baseline_tokens":90}
+{"task_id":"set-011","prompt":"Return the union of [11, 12] and [12, 13] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[11,12,13]","baseline_tokens":90}
+{"task_id":"set-012","prompt":"Return the union of [12, 13] and [13, 14] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[12,13,14]","baseline_tokens":90}
+{"task_id":"set-013","prompt":"Return the union of [13, 14] and [14, 15] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[13,14,15]","baseline_tokens":90}
+{"task_id":"set-014","prompt":"Return the union of [14, 15] and [15, 16] as JSON.","task_type":"format_strict","expected_route":"deterministic","expected_answer":"[14,15,16]","baseline_tokens":90}
+{"task_id":"date-000","prompt":"How many days between 2026-01-01 and 2026-01-02?","task_type":"math","expected_route":"deterministic","expected_answer":"1","baseline_tokens":90}
+{"task_id":"date-001","prompt":"How many days between 2026-01-01 and 2026-01-03?","task_type":"math","expected_route":"deterministic","expected_answer":"2","baseline_tokens":90}
+{"task_id":"date-002","prompt":"How many days between 2026-01-01 and 2026-01-04?","task_type":"math","expected_route":"deterministic","expected_answer":"3","baseline_tokens":90}
+{"task_id":"date-003","prompt":"How many days between 2026-01-01 and 2026-01-05?","task_type":"math","expected_route":"deterministic","expected_answer":"4","baseline_tokens":90}
+{"task_id":"date-004","prompt":"How many days between 2026-01-01 and 2026-01-06?","task_type":"math","expected_route":"deterministic","expected_answer":"5","baseline_tokens":90}
+{"task_id":"date-005","prompt":"How many days between 2026-01-01 and 2026-01-07?","task_type":"math","expected_route":"deterministic","expected_answer":"6","baseline_tokens":90}
+{"task_id":"date-006","prompt":"How many days between 2026-01-01 and 2026-01-08?","task_type":"math","expected_route":"deterministic","expected_answer":"7","baseline_tokens":90}
+{"task_id":"date-007","prompt":"How many days between 2026-01-01 and 2026-01-09?","task_type":"math","expected_route":"deterministic","expected_answer":"8","baseline_tokens":90}
+{"task_id":"date-008","prompt":"How many days between 2026-01-01 and 2026-01-10?","task_type":"math","expected_route":"deterministic","expected_answer":"9","baseline_tokens":90}
+{"task_id":"date-009","prompt":"How many days between 2026-01-01 and 2026-01-11?","task_type":"math","expected_route":"deterministic","expected_answer":"10","baseline_tokens":90}
+{"task_id":"date-010","prompt":"How many days between 2026-01-01 and 2026-01-12?","task_type":"math","expected_route":"deterministic","expected_answer":"11","baseline_tokens":90}
+{"task_id":"date-011","prompt":"How many days between 2026-01-01 and 2026-01-13?","task_type":"math","expected_route":"deterministic","expected_answer":"12","baseline_tokens":90}
+{"task_id":"date-012","prompt":"How many days between 2026-01-01 and 2026-01-14?","task_type":"math","expected_route":"deterministic","expected_answer":"13","baseline_tokens":90}
+{"task_id":"date-013","prompt":"How many days between 2026-01-01 and 2026-01-15?","task_type":"math","expected_route":"deterministic","expected_answer":"14","baseline_tokens":90}
+{"task_id":"date-014","prompt":"How many days between 2026-01-01 and 2026-01-16?","task_type":"math","expected_route":"deterministic","expected_answer":"15","baseline_tokens":90}
+{"task_id":"host-000","prompt":"Review the architecture and recommend one improvement. Case 0.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-001","prompt":"Write a concise explanation of routing tradeoffs. Case 1.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-002","prompt":"Summarize the supplied design without losing caveats. Case 2.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-003","prompt":"Debug an unfamiliar integration failure. Case 3.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-004","prompt":"Compare two deployment strategies and justify the decision. Case 4.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-005","prompt":"Draft a migration plan for a production service. Case 5.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-006","prompt":"Review the architecture and recommend one improvement. Case 6.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-007","prompt":"Write a concise explanation of routing tradeoffs. Case 7.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-008","prompt":"Summarize the supplied design without losing caveats. Case 8.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-009","prompt":"Debug an unfamiliar integration failure. Case 9.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-010","prompt":"Compare two deployment strategies and justify the decision. Case 10.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-011","prompt":"Draft a migration plan for a production service. Case 11.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-012","prompt":"Review the architecture and recommend one improvement. Case 12.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-013","prompt":"Write a concise explanation of routing tradeoffs. Case 13.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-014","prompt":"Summarize the supplied design without losing caveats. Case 14.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-015","prompt":"Debug an unfamiliar integration failure. Case 15.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-016","prompt":"Compare two deployment strategies and justify the decision. Case 16.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-017","prompt":"Draft a migration plan for a production service. Case 17.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-018","prompt":"Review the architecture and recommend one improvement. Case 18.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-019","prompt":"Write a concise explanation of routing tradeoffs. Case 19.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-020","prompt":"Summarize the supplied design without losing caveats. Case 20.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-021","prompt":"Debug an unfamiliar integration failure. Case 21.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-022","prompt":"Compare two deployment strategies and justify the decision. Case 22.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-023","prompt":"Draft a migration plan for a production service. Case 23.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-024","prompt":"Review the architecture and recommend one improvement. Case 24.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-025","prompt":"Write a concise explanation of routing tradeoffs. Case 25.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-026","prompt":"Summarize the supplied design without losing caveats. Case 26.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-027","prompt":"Debug an unfamiliar integration failure. Case 27.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-028","prompt":"Compare two deployment strategies and justify the decision. Case 28.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-029","prompt":"Draft a migration plan for a production service. Case 29.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-030","prompt":"Review the architecture and recommend one improvement. Case 30.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-031","prompt":"Write a concise explanation of routing tradeoffs. Case 31.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-032","prompt":"Summarize the supplied design without losing caveats. Case 32.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-033","prompt":"Debug an unfamiliar integration failure. Case 33.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-034","prompt":"Compare two deployment strategies and justify the decision. Case 34.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-035","prompt":"Draft a migration plan for a production service. Case 35.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-036","prompt":"Review the architecture and recommend one improvement. Case 36.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-037","prompt":"Write a concise explanation of routing tradeoffs. Case 37.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-038","prompt":"Summarize the supplied design without losing caveats. Case 38.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-039","prompt":"Debug an unfamiliar integration failure. Case 39.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-040","prompt":"Compare two deployment strategies and justify the decision. Case 40.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-041","prompt":"Draft a migration plan for a production service. Case 41.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-042","prompt":"Review the architecture and recommend one improvement. Case 42.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-043","prompt":"Write a concise explanation of routing tradeoffs. Case 43.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-044","prompt":"Summarize the supplied design without losing caveats. Case 44.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-045","prompt":"Debug an unfamiliar integration failure. Case 45.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-046","prompt":"Compare two deployment strategies and justify the decision. Case 46.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-047","prompt":"Draft a migration plan for a production service. Case 47.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-048","prompt":"Review the architecture and recommend one improvement. Case 48.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-049","prompt":"Write a concise explanation of routing tradeoffs. Case 49.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-050","prompt":"Summarize the supplied design without losing caveats. Case 50.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-051","prompt":"Debug an unfamiliar integration failure. Case 51.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-052","prompt":"Compare two deployment strategies and justify the decision. Case 52.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-053","prompt":"Draft a migration plan for a production service. Case 53.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-054","prompt":"Review the architecture and recommend one improvement. Case 54.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-055","prompt":"Write a concise explanation of routing tradeoffs. Case 55.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-056","prompt":"Summarize the supplied design without losing caveats. Case 56.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-057","prompt":"Debug an unfamiliar integration failure. Case 57.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-058","prompt":"Compare two deployment strategies and justify the decision. Case 58.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}
+{"task_id":"host-059","prompt":"Draft a migration plan for a production service. Case 59.","task_type":"qa","expected_route":"host_model","expected_answer":null,"baseline_tokens":180}

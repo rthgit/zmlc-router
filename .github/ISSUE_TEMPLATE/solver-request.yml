@@ -1,0 +1,29 @@
+name: Solver request
+description: Propose a bounded, independently verifiable deterministic solver.
+title: "[solver] "
+labels: [solver]
+body:
+  - type: textarea
+    attributes:
+      label: Closed input contract
+      description: Define exactly when the solver can act and when it must abstain.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Independent verification
+      description: Explain how the result can be recomputed without trusting the solver.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected token value
+      description: Estimate model calls or input tokens avoided on a public workload.
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Dataset independence
+      options:
+        - label: This proposal does not depend on hidden benchmark IDs or memorized answers.
+          required: true

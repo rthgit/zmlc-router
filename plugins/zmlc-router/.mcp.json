@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zmlc-router": {
+      "command": "python",
+      "args": ["./runtime/zmlc_router.pyz"]
+    }
+  }
+}

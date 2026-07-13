@@ -1,0 +1,37 @@
+{
+  "name": "zmlc-router",
+  "version": "0.9.0+codex.20260713090318",
+  "description": "Route Codex tasks through deterministic solvers before using model generation.",
+  "author": {
+    "name": "RTHack",
+    "url": "https://github.com/rthgit"
+  },
+  "repository": "https://github.com/rthgit/zmlc-router",
+  "license": "Apache-2.0",
+  "keywords": [
+    "routing",
+    "token-efficiency",
+    "solvers",
+    "verification",
+    "local-first"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ZMLC Local-First Router",
+    "shortDescription": "Solve locally and compile smaller Codex prompts.",
+    "longDescription": "ZMLC silently uses deterministic solvers when possible, then delegates unsupported work to the active Codex model with compact task contracts.",
+    "developerName": "RTHack",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "Solve this task using deterministic tools when appropriate.",
+      "Optimize this coding task for minimal context and execute it.",
+      "Audit which parts of this workflow can avoid model tokens."
+    ],
+    "brandColor": "#14B8A6"
+  },
+  "mcpServers": "./.mcp.json"
+}
