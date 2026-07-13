@@ -3,10 +3,12 @@
 [![CI](https://github.com/rthgit/zmlc-router/actions/workflows/ci.yml/badge.svg)](https://github.com/rthgit/zmlc-router/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
 
-ZMLC Router is a fail-closed token-efficiency layer for Codex and other AI workloads.
-It attempts bounded, independently verified solvers before model generation. In the
-Codex plugin, unsupported work is delegated to the active Codex model; no second model,
-API key, or local model is required.
+![ZMLC deterministic preflight and Codex delegation](plugins/zmlc-router/assets/zmlc-preflight-demo.png)
+
+ZMLC Router is a fail-closed Codex preflight that avoids model calls for bounded,
+independently verifiable tasks and delegates everything else unchanged. In the Codex
+plugin, unsupported work is delegated to the active Codex model; no second model, API
+key, or local model is required.
 
 The standalone `zmlc codex` command is the real preflight path: it returns verified
 deterministic answers before Codex starts and otherwise invokes the Codex installation
@@ -24,7 +26,7 @@ The checked-in 200-task public proxy corpus currently reports:
 - 100% route accuracy and deterministic answer accuracy;
 - zero deterministic false accepts;
 - 52.32% estimated model-token savings;
-- 0.022 ms median routing latency.
+- 0.031 ms median routing latency.
 
 These are proxy routing results, not a Codex billing claim. See
 `docs/BENCHMARKING.md` for the exact methodology and limitations.
@@ -38,6 +40,10 @@ smoke demonstrates call avoidance; it is not a savings forecast for arbitrary co
 
 For Codex, use the signed standalone archive for Windows, macOS, or Linux described in
 `docs/INSTALL.md`. The release bundle does not require Python.
+
+Verified one-command installers and their manual alternatives are documented in
+`docs/INSTALL.md`. The product rationale and measurement boundaries are in
+`docs/WHY_ZMLC.md`.
 
 For framework development:
 
@@ -61,6 +67,7 @@ zmlc codex "Review this repository" --cd . --sandbox workspace-write
 zmlc route "Return JSON only: {\"ok\": true}"
 zmlc prompt "Fix the parser" --context @src/parser.py --constraint "Keep API stable" --check "Run parser tests"
 zmlc benchmark benchmarks/public_mixed_200.jsonl --report build/benchmark/report.json
+zmlc doctor
 ```
 
 ## Python
@@ -106,5 +113,6 @@ The Codex plugin exposes the same behavior through `compile_prompt` and
 
 ## Status
 
-`1.0.0` freezes the solver and MCP contracts, ships standalone MCP and preflight CLI
-binaries, and publishes both proxy and real paired smoke measurements.
+`1.0.2` freezes the solver and MCP contracts, ships standalone MCP and preflight CLI
+binaries, validates the final release archives, and publishes both proxy and real paired
+smoke measurements.

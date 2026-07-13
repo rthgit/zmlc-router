@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -16,8 +19,28 @@ def main() -> int:
     output.parent.mkdir(parents=True, exist_ok=True)
     archive = Path(shutil.make_archive(str(output.with_suffix("")), "zip", source.parent, source.name))
     digest = hashlib.sha256(archive.read_bytes()).hexdigest()
-    archive.with_suffix(archive.suffix + ".sha256").write_text(
+    checksum = archive.with_suffix(archive.suffix + ".sha256")
+    checksum.write_text(
         f"{digest}  {archive.name}\n", encoding="ascii"
+    )
+    manifest = json.loads(
+        (source / "plugins" / "zmlc-router" / ".codex-plugin" / "plugin.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    expected_version = str(manifest["version"]).split("+", 1)[0]
+    subprocess.run(
+        [
+            sys.executable,
+            str(Path(__file__).with_name("smoke_release_archive.py")),
+            "--archive",
+            str(archive),
+            "--sha256",
+            str(checksum),
+            "--expected-version",
+            expected_version,
+        ],
+        check=True,
     )
     print(archive)
     return 0

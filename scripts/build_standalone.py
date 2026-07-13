@@ -26,30 +26,9 @@ def main() -> int:
     shutil.rmtree(plugin_bundle / "runtime", ignore_errors=True)
     marketplace_path = bundle / ".agents" / "plugins" / "marketplace.json"
     marketplace_path.parent.mkdir(parents=True, exist_ok=True)
-    marketplace_path.write_text(
-        json.dumps(
-            {
-                "name": "zmlc-public",
-                "interface": {"displayName": "ZMLC Public"},
-                "plugins": [
-                    {
-                        "name": "zmlc-router",
-                        "source": {
-                            "source": "local",
-                            "path": "./plugins/zmlc-router",
-                        },
-                        "policy": {
-                            "installation": "AVAILABLE",
-                            "authentication": "ON_INSTALL",
-                        },
-                        "category": "Productivity",
-                    }
-                ],
-            },
-            indent=2,
-        )
-        + "\n",
-        encoding="utf-8",
+    shutil.copy2(
+        project_root / ".agents" / "plugins" / "marketplace.json",
+        marketplace_path,
     )
 
     dist_dir = project_root / "build" / "standalone"

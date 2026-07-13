@@ -1,5 +1,25 @@
 # Installation
 
+## Verified installer
+
+The installers require `cosign` so both SHA-256 and the GitHub Actions Sigstore bundle
+are verified before anything is installed. Review the scripts before remote execution.
+
+Windows PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/rthgit/zmlc-router/main/install.ps1 | iex
+```
+
+Linux or macOS:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/rthgit/zmlc-router/main/install.sh | sh
+```
+
+Each installer selects the platform archive, verifies it, extracts it to a stable user
+directory, registers `zmlc-public`, installs the plugin, and runs `zmlc doctor`.
+
 ## Codex plugin: release bundle
 
 Download the archive matching your operating system from the latest GitHub release,
@@ -15,6 +35,12 @@ codex plugin add zmlc-router@zmlc-public
 ```
 
 Start a new Codex task after installation so the skill and MCP server are loaded.
+
+Verify an existing installation without making a model call:
+
+```bash
+./plugins/zmlc-router/bin/zmlc doctor
+```
 
 For actual model-call avoidance, run the executable from the extracted bundle:
 

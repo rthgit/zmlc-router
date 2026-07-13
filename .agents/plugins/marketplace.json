@@ -1,7 +1,7 @@
 {
-  "name": "personal",
+  "name": "zmlc-public",
   "interface": {
-    "displayName": "Personal"
+    "displayName": "ZMLC Public"
   },
   "plugins": [
     {

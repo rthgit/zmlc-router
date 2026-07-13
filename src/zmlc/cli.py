@@ -6,6 +6,7 @@ import sys
 
 from zmlc.benchmark import load_cases, run_benchmark, write_report
 from zmlc.codex_runner import run_codex_preflight
+from zmlc.doctor import format_doctor, json_doctor, run_doctor
 from zmlc.experiments import compare_observations, load_observations, write_paired_report
 from zmlc.models import Task
 from zmlc.prompting import PromptSpec, compile_prompt
@@ -65,7 +66,13 @@ def main(argv: list[str] | None = None) -> int:
     codex_cmd.add_argument("--persist", action="store_true")
     codex_cmd.add_argument("--json", action="store_true", dest="json_output")
     codex_cmd.add_argument("--audit", action="store_true")
+    doctor_cmd = sub.add_parser("doctor", help="Verify Codex, plugin, MCP, and preflight")
+    doctor_cmd.add_argument("--json", action="store_true", dest="json_output")
     args = parser.parse_args(argv)
+    if args.command == "doctor":
+        report = run_doctor()
+        print(json_doctor(report) if args.json_output else format_doctor(report))
+        return 0 if report["ok"] else 4
     if args.command == "prompt":
         compiled = compile_prompt(
             PromptSpec(

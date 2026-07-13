@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+## 1.0.2
+
+- Aligned the source and standalone marketplace identity on `zmlc-public`.
+- Added an end-to-end smoke test for the checksummed release archive after extraction.
+- Added verified PowerShell and POSIX installers plus the `zmlc doctor` diagnostic.
+- Added a concise product rationale and explicit MCP-versus-preflight guidance.
+- Clarified the product positioning as a fail-closed Codex preflight.
+
 ## 1.0.1
 
 - Added a dedicated ZMLC routing icon for the composer and plugin catalog.

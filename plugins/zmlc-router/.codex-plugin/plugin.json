@@ -1,6 +1,6 @@
 {
   "name": "zmlc-router",
-  "version": "1.0.1+codex.20260713105344",
+  "version": "1.0.2+codex.20260713112051",
   "description": "Use verified deterministic tools and compact prompts with the active Codex model.",
   "author": {
     "name": "RTHack",
@@ -34,7 +34,10 @@
     "brandColor": "#14B8A6",
     "composerIcon": "./assets/zmlc-router-64.png",
     "logo": "./assets/zmlc-router-512.png",
-    "logoDark": "./assets/zmlc-router-512.png"
+    "logoDark": "./assets/zmlc-router-512.png",
+    "screenshots": [
+      "./assets/zmlc-preflight-demo.png"
+    ]
   },
   "mcpServers": "./.mcp.json"
 }

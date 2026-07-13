@@ -91,6 +91,14 @@ def main() -> int:
         if plugin.get("repository") != "https://github.com/rthgit/zmlc-router":
             fail("plugin repository must point to the public framework repository", failures)
 
+    marketplace_path = root / ".agents/plugins/marketplace.json"
+    if marketplace_path.is_file():
+        marketplace = json.loads(marketplace_path.read_text(encoding="utf-8"))
+        if marketplace.get("name") != "zmlc-public":
+            fail("source marketplace name must be zmlc-public", failures)
+        if (marketplace.get("interface") or {}).get("displayName") != "ZMLC Public":
+            fail("source marketplace display name must be ZMLC Public", failures)
+
     mcp_path = root / "plugins/zmlc-router/.mcp.json"
     if mcp_path.is_file():
         mcp_document = json.loads(mcp_path.read_text(encoding="utf-8"))
