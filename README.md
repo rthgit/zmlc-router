@@ -113,6 +113,6 @@ The Codex plugin exposes the same behavior through `compile_prompt` and
 
 ## Status
 
-`1.0.2` freezes the solver and MCP contracts, ships standalone MCP and preflight CLI
+`1.0.3` freezes the solver and MCP contracts, ships standalone MCP and preflight CLI
 binaries, validates the final release archives, and publishes both proxy and real paired
 smoke measurements.

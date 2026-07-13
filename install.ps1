@@ -9,15 +9,18 @@ $base = "https://github.com/$repo/releases/latest/download"
 $temporary = Join-Path ([System.IO.Path]::GetTempPath()) ("zmlc-install-" + [guid]::NewGuid())
 
 function Find-Codex {
-    $command = Get-Command codex -ErrorAction SilentlyContinue
-    if ($command) { return $command.Source }
-    $direct = Join-Path $env:LOCALAPPDATA "OpenAI\Codex\bin\codex.exe"
-    if (Test-Path $direct) { return $direct }
     $versioned = Get-ChildItem (Join-Path $env:LOCALAPPDATA "OpenAI\Codex\bin") `
         -Filter codex.exe -Recurse -ErrorAction SilentlyContinue |
+        Where-Object { $_.FullName -ne (Join-Path $env:LOCALAPPDATA "OpenAI\Codex\bin\codex.exe") } |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
     if ($versioned) { return $versioned.FullName }
+    $direct = Join-Path $env:LOCALAPPDATA "OpenAI\Codex\bin\codex.exe"
+    if (Test-Path $direct) { return $direct }
+    $command = Get-Command codex -ErrorAction SilentlyContinue
+    if ($command -and $command.Source -notmatch "\\WindowsApps\\") {
+        return $command.Source
+    }
     throw "Codex was not found. Install Codex or set it on PATH before installing ZMLC."
 }
 

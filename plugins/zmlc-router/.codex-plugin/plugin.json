@@ -1,6 +1,6 @@
 {
   "name": "zmlc-router",
-  "version": "1.0.2+codex.20260713112051",
+  "version": "1.0.3+codex.20260713113843",
   "description": "Use verified deterministic tools and compact prompts with the active Codex model.",
   "author": {
     "name": "RTHack",

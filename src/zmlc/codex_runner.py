@@ -50,11 +50,11 @@ def find_codex_binary(explicit: str | None = None) -> str:
     local_app_data = os.environ.get("LOCALAPPDATA")
     if local_app_data:
         direct_desktop_cli = Path(local_app_data) / "OpenAI" / "Codex" / "bin" / "codex.exe"
+        versioned = list(Path(local_app_data).glob("OpenAI/Codex/bin/*/codex.exe"))
+        if versioned:
+            return str(max(versioned, key=lambda path: path.stat().st_mtime))
         if direct_desktop_cli.is_file():
-            candidates.append(direct_desktop_cli)
-        candidates.extend(Path(local_app_data).glob("OpenAI/Codex/bin/*/codex.exe"))
-    if candidates:
-        return str(max(candidates, key=lambda path: path.stat().st_mtime))
+            return str(direct_desktop_cli)
     discovered = shutil.which("codex")
     if discovered:
         return discovered

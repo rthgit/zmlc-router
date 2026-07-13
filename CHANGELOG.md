@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## 1.0.3
+
+- Prefer the newest versioned Codex Desktop runtime over stale compatibility binaries.
+
 ## 1.0.2
 
 - Aligned the source and standalone marketplace identity on `zmlc-public`.

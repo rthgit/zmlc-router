@@ -98,6 +98,18 @@ class CodexRunnerTests(unittest.TestCase):
             ):
                 self.assertEqual(find_codex_binary(), str(newer))
 
+    def test_versioned_desktop_runtime_beats_unversioned_compatibility_binary(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            local_app_data = Path(temporary)
+            direct = local_app_data / "OpenAI" / "Codex" / "bin" / "codex.exe"
+            versioned = local_app_data / "OpenAI" / "Codex" / "bin" / "current" / "codex.exe"
+            direct.parent.mkdir(parents=True)
+            versioned.parent.mkdir(parents=True)
+            direct.write_bytes(b"compatibility")
+            versioned.write_bytes(b"current")
+            with patch.dict(os.environ, {"LOCALAPPDATA": str(local_app_data)}, clear=False):
+                self.assertEqual(find_codex_binary(), str(versioned))
+
 
 if __name__ == "__main__":
     unittest.main()
